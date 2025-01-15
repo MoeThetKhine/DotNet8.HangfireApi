@@ -23,10 +23,7 @@ namespace DotNet8.HangfireApi
 
         #region AddDbContextService
 
-        private static IServiceCollection AddDbContextService(
-            this IServiceCollection services,
-            WebApplicationBuilder builder
-        )
+        private static IServiceCollection AddDbContextService(this IServiceCollection services,WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<AppDbContext>(
                 opt =>
@@ -35,7 +32,6 @@ namespace DotNet8.HangfireApi
                 },
                 ServiceLifetime.Transient
             );
-
             return services;
         }
 
