@@ -46,10 +46,15 @@ namespace DotNet8.HangfireApi
 
         #endregion
 
+        #region AddBusinessLogicService
+
         private static IServiceCollection AddBusinessLogicService(this IServiceCollection services)
         {
             return services.AddScoped<BL_Blog>();
         }
+
+        #endregion
+
         private static IServiceCollection AddHangfireService(
             this IServiceCollection services,
             WebApplicationBuilder builder
