@@ -11,6 +11,8 @@ public class BlogController : BaseController
         _blBlog = blBlog;
     }
 
+    #region Get Blogs
+
     [HttpGet]
     public async Task<IActionResult> GetBlogs()
     {
@@ -24,4 +26,7 @@ public class BlogController : BaseController
             return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
     }
+
+    #endregion
+
 }
