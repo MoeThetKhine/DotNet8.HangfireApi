@@ -37,10 +37,14 @@ namespace DotNet8.HangfireApi
 
         #endregion
 
+        #region AddRepositoryService
+
         private static IServiceCollection AddRepositoryService(this IServiceCollection services)
         {
             return services.AddScoped<IBlogRepository, BlogRepository>();
         }
+
+        #endregion
 
         private static IServiceCollection AddBusinessLogicService(this IServiceCollection services)
         {
