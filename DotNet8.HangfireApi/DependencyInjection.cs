@@ -1,4 +1,5 @@
 ﻿using DotNet8.HangfireApi.Modelts;
+using DotNet8.HangfireApi.Repositories.Blog;
 
 namespace DotNet8.HangfireApi
 {
@@ -18,6 +19,11 @@ namespace DotNet8.HangfireApi
             );
 
             return services;
+        }
+
+        private static IServiceCollection AddRepositoryService(this IServiceCollection services)
+        {
+            return services.AddScoped<IBlogRepository, BlogRepository>();
         }
     }
 }
