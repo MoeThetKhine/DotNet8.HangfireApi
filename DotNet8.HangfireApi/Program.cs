@@ -18,6 +18,8 @@ app.UseHttpsRedirection();
 
 app.UseHangfireDashboard();
 
+#region AddOrUpdate
+
 RecurringJob.AddOrUpdate<IBlogRepository>(
     Guid.NewGuid().ToString(),
     x => x.CreateBlog(
@@ -29,6 +31,9 @@ RecurringJob.AddOrUpdate<IBlogRepository>(
         }),
     Cron.Minutely);
 
+#endregion
+
+
 BackgroundJob.Schedule<IBlogRepository>(
        x => x.CreateBlog(new BlogRequestModel()
         {
@@ -37,6 +42,7 @@ BackgroundJob.Schedule<IBlogRepository>(
             BlogContent = "Delay Job" 
         }),
           TimeSpan.FromMinutes(1));
+
 
 app.UseAuthorization();
 
