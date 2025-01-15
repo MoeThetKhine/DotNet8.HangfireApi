@@ -1,6 +1,6 @@
-﻿using DotNet8.HangfireApi.Features.Blog;
+﻿using DotNet8.HangfireApi.AppDbContextModels;
+using DotNet8.HangfireApi.Features.Blog;
 using DotNet8.HangfireApi.Models;
-using DotNet8.HangfireApi.Modelts;
 
 namespace DotNet8.HangfireApi.Mapper
 {
