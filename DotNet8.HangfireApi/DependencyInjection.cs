@@ -55,10 +55,9 @@ namespace DotNet8.HangfireApi
 
         #endregion
 
-        private static IServiceCollection AddHangfireService(
-            this IServiceCollection services,
-            WebApplicationBuilder builder
-        )
+        #region AddHangfireService
+
+        private static IServiceCollection AddHangfireService(this IServiceCollection services,WebApplicationBuilder builder)
         {
             builder.Services.AddHangfire(opt =>
             {
@@ -71,5 +70,8 @@ namespace DotNet8.HangfireApi
             builder.Services.AddHangfireServer();
             return services;
         }
+
+        #endregion
+
     }
 }
