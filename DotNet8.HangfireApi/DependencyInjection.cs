@@ -7,6 +7,9 @@ namespace DotNet8.HangfireApi
 {
     public static class DependencyInjection
     {
+
+        #region AddFeatures
+
         public static IServiceCollection AddFeatures(this IServiceCollection services,WebApplicationBuilder builder)
         {
             return services
@@ -15,6 +18,8 @@ namespace DotNet8.HangfireApi
                 .AddRepositoryService()
                 .AddBusinessLogicService();
         }
+
+        #endregion
 
         private static IServiceCollection AddDbContextService(
             this IServiceCollection services,
