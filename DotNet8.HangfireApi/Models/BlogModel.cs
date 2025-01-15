@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.HangfireApi.Models;
 
+#region BlogModel
+
 public class BlogModel
 {
     public long BlogId { get; set; }
@@ -12,3 +14,5 @@ public class BlogModel
 
     public bool DeleteFlag { get; set; }
 }
+
+#endregion
