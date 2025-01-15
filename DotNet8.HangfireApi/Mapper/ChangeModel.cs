@@ -18,6 +18,8 @@ public static class ChangeModel
 
     #endregion
 
+    #region TblBlog Map
+
     public static TblBlog Map(this BlogRequestModel requestModel)
     {
         return new TblBlog
@@ -27,4 +29,7 @@ public static class ChangeModel
             BlogContent = requestModel.BlogContent
         };
     }
+
+    #endregion
+
 }
