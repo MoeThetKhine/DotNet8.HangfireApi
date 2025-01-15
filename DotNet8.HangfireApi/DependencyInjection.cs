@@ -1,7 +1,4 @@
-﻿using DotNet8.HangfireApi.AppDbContextModels;
-using DotNet8.HangfireApi.Features.Blog;
-
-namespace DotNet8.HangfireApi
+﻿namespace DotNet8.HangfireApi
 {
     public static class DependencyInjection
     {
