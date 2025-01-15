@@ -35,6 +35,8 @@ public partial class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        #region TaskCategory
+
         modelBuilder.Entity<TaskCategory>(entity =>
         {
             entity.HasKey(e => e.CategoryId).HasName("PK__TaskCate__19093A2B739DC4B2");
@@ -46,6 +48,8 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
         });
+
+        #endregion
 
         modelBuilder.Entity<TblBlog>(entity =>
         {
