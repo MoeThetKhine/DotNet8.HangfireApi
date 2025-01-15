@@ -1,4 +1,4 @@
-﻿namespace DotNet8.HangfireApi.Modelts;
+﻿namespace DotNet8.HangfireApi.AppDbContextModels;
 
 #region ToDoList
 
