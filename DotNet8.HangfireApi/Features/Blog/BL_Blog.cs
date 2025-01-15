@@ -1,7 +1,4 @@
-﻿using DotNet8.HangfireApi.Models;
-using DotNet8.HangfireApi.Repositories.Blog;
-
-namespace DotNet8.HangfireApi.Features.Blog
+﻿namespace DotNet8.HangfireApi.Features.Blog
 {
     public class BL_Blog
     {
