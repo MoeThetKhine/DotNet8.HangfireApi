@@ -1,8 +1,3 @@
-using DotNet8.HangfireApi;
-using DotNet8.HangfireApi.Models;
-using DotNet8.HangfireApi.Repositories.Blog;
-using Hangfire;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
