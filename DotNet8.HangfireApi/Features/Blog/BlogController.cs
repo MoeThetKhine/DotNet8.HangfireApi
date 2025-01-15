@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DotNet8.HangfireApi.Features.Blog
+﻿namespace DotNet8.HangfireApi.Features.Blog
 {
     [Route("api/[controller]")]
     [ApiController]
