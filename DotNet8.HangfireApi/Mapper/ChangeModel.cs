@@ -1,8 +1,4 @@
-﻿using DotNet8.HangfireApi.AppDbContextModels;
-using DotNet8.HangfireApi.Features.Blog;
-using DotNet8.HangfireApi.Models;
-
-namespace DotNet8.HangfireApi.Mapper
+﻿namespace DotNet8.HangfireApi.Mapper
 {
     public static class ChangeModel
     {
