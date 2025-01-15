@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DotNet8.HangfireApi.Modelts;
+﻿namespace DotNet8.HangfireApi.Modelts;
 
 public partial class TaskCategory
 {
