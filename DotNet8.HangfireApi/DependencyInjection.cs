@@ -67,5 +67,4 @@ public static class DependencyInjection
     }
 
     #endregion
-
 }
