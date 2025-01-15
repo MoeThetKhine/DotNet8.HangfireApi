@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.HangfireApi.Modelts;
 
+#region TaskCategory
+
 public partial class TaskCategory
 {
     public int CategoryId { get; set; }
@@ -10,3 +12,5 @@ public partial class TaskCategory
 
     public virtual ICollection<ToDoList> ToDoLists { get; set; } = new List<ToDoList>();
 }
+
+#endregion
