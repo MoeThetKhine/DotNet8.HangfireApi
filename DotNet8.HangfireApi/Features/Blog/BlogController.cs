@@ -1,28 +1,27 @@
-﻿namespace DotNet8.HangfireApi.Features.Blog
+﻿namespace DotNet8.HangfireApi.Features.Blog;
+
+[Route("api/[controller]")]
+[ApiController]
+public class BlogController : BaseController
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BlogController : BaseController
+    private readonly BL_Blog _blBlog;
+
+    public BlogController(BL_Blog blBlog)
     {
-        private readonly BL_Blog _blBlog;
+        _blBlog = blBlog;
+    }
 
-        public BlogController(BL_Blog blBlog)
+    [HttpGet]
+    public async Task<IActionResult> GetBlogs()
+    {
+        try
         {
-            _blBlog = blBlog;
+            var result = await _blBlog.GetBlogs();
+            return Content(result);
         }
-
-        [HttpGet]
-        public async Task<IActionResult> GetBlogs()
+        catch (Exception ex)
         {
-            try
-            {
-                var result = await _blBlog.GetBlogs();
-                return Content(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-            }
+            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
     }
 }
