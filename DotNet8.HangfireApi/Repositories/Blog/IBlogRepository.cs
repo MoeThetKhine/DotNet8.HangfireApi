@@ -1,6 +1,9 @@
-﻿namespace DotNet8.HangfireApi.Repositories.Blog
+﻿using DotNet8.HangfireApi.Models;
+
+namespace DotNet8.HangfireApi.Repositories.Blog
 {
     public interface IBlogRepository
     {
+        Task<BlogListResponseModel> GetBlogs();
     }
 }
