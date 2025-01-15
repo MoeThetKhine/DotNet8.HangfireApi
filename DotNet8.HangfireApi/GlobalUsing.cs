@@ -5,3 +5,5 @@ global using DotNet8.HangfireApi.Repositories.Blog;
 global using Hangfire;
 global using DotNet8.HangfireApi.AppDbContextModels;
 global using DotNet8.HangfireApi.Features.Blog;
+global using DotNet8.HangfireApi.Models;
+

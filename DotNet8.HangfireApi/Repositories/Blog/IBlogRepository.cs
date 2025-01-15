@@ -1,6 +1,4 @@
-﻿using DotNet8.HangfireApi.Models;
-
-namespace DotNet8.HangfireApi.Repositories.Blog
+﻿namespace DotNet8.HangfireApi.Repositories.Blog
 {
     public interface IBlogRepository
     {
