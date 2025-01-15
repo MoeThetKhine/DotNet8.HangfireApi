@@ -1,6 +1,7 @@
 ﻿using DotNet8.HangfireApi.Features.Blog;
 using DotNet8.HangfireApi.Modelts;
 using DotNet8.HangfireApi.Repositories.Blog;
+using Hangfire;
 
 namespace DotNet8.HangfireApi
 {
@@ -30,6 +31,22 @@ namespace DotNet8.HangfireApi
         private static IServiceCollection AddBusinessLogicService(this IServiceCollection services)
         {
             return services.AddScoped<BL_Blog>();
+        }
+        private static IServiceCollection AddHangfireService(
+            this IServiceCollection services,
+            WebApplicationBuilder builder
+        )
+        {
+            builder.Services.AddHangfire(opt =>
+            {
+                opt.UseSqlServerStorage(builder.Configuration.GetConnectionString("DbConnection"))
+                    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+                    .UseSimpleAssemblyNameTypeSerializer()
+                    .UseRecommendedSerializerSettings();
+            });
+
+            builder.Services.AddHangfireServer();
+            return services;
         }
     }
 }
