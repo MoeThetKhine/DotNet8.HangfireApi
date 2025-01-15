@@ -1,12 +1,11 @@
-﻿namespace DotNet8.HangfireApi.Features
+﻿namespace DotNet8.HangfireApi.Features;
+
+[Route("api/[controller]")]
+[ApiController]
+public class BaseController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BaseController : ControllerBase
+    protected IActionResult Content(object obj)
     {
-        protected IActionResult Content(object obj)
-        {
-            return Content(JsonConvert.SerializeObject(obj), "application/json");
-        }
+        return Content(JsonConvert.SerializeObject(obj), "application/json");
     }
 }
