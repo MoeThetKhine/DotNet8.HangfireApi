@@ -9,8 +9,13 @@ public class BL_Blog
         _blogRepository = blogRepository;
     }
 
+    #region Get Blogs
+
     public async Task<BlogListResponseModel> GetBlogs()
     {
         return await _blogRepository.GetBlogs();
     }
+
+    #endregion
+
 }
