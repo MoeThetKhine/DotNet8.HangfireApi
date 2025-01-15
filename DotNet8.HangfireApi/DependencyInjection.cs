@@ -1,7 +1,5 @@
 ﻿using DotNet8.HangfireApi.AppDbContextModels;
 using DotNet8.HangfireApi.Features.Blog;
-using DotNet8.HangfireApi.Repositories.Blog;
-using Hangfire;
 
 namespace DotNet8.HangfireApi
 {
