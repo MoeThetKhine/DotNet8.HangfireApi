@@ -7,10 +7,7 @@ namespace DotNet8.HangfireApi
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddFeatures(
-            this IServiceCollection services,
-            WebApplicationBuilder builder
-        )
+        public static IServiceCollection AddFeatures(this IServiceCollection services,WebApplicationBuilder builder)
         {
             return services
                 .AddDbContextService(builder)
