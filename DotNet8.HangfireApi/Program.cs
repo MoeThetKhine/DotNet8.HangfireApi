@@ -1,4 +1,7 @@
 using DotNet8.HangfireApi;
+using DotNet8.HangfireApi.Models;
+using DotNet8.HangfireApi.Repositories.Blog;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,28 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseHangfireDashboard();
+
+//RecurringJob.AddOrUpdate<IBlogRepository>(
+//    Guid.NewGuid().ToString(),
+//    x => x.CreateBlog(
+//        new BlogRequestModel() 
+//        { 
+//            BlogTitle = "Recurring Job", 
+//            BlogAuthor = "Recurring Job",
+//            BlogContent = "Recurring Job" 
+//        }),
+//    Cron.Minutely);
+
+//BackgroundJob.Schedule<IBlogRepository>(
+//       x => x.CreateBlog(new BlogRequestModel()
+//        {
+//            BlogTitle = "Delay Job", 
+//            BlogAuthor = "Delay Job",
+//            BlogContent = "Delay Job" 
+//        }),
+//          TimeSpan.FromMinutes(1));
 
 app.UseAuthorization();
 
