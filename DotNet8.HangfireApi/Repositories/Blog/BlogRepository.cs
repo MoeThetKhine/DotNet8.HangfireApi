@@ -1,6 +1,35 @@
-﻿namespace DotNet8.HangfireApi.Repositories.Blog
+﻿using DotNet8.HangfireApi.Mapper;
+using DotNet8.HangfireApi.Models;
+using DotNet8.HangfireApi.Modelts;
+
+namespace DotNet8.HangfireApi.Repositories.Blog
 {
-    public class BlogRepository
+    public class BlogRepository : IBlogRepository
     {
+        private readonly AppDbContext _appDbContext;
+
+        public BlogRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
+
+        public async Task<BlogListResponseModel> GetBlogs()
+        {
+            try
+            {
+                var lst = await _appDbContext.TblBlogs
+                    .AsNoTracking()
+                    .OrderByDescending(x => x.BlogId)
+                    .ToListAsync();
+                return new BlogListResponseModel()
+                {
+                    DataLst = lst.Select(x => x.Map()).ToList()
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
