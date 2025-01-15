@@ -9,6 +9,8 @@ public class BlogRepository : IBlogRepository
         _appDbContext = appDbContext;
     }
 
+    #region CreateBlog
+
     public async Task<int> CreateBlog(BlogRequestModel requestModel)
     {
         try
@@ -21,6 +23,8 @@ public class BlogRepository : IBlogRepository
             throw new Exception(ex.Message);
         }
     }
+
+    #endregion
 
     public async Task<BlogListResponseModel> GetBlogs()
     {
