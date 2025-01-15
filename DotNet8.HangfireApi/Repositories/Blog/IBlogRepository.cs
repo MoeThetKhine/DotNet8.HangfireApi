@@ -1,8 +1,7 @@
-﻿namespace DotNet8.HangfireApi.Repositories.Blog
+﻿namespace DotNet8.HangfireApi.Repositories.Blog;
+
+public interface IBlogRepository
 {
-    public interface IBlogRepository
-    {
-        Task<BlogListResponseModel> GetBlogs();
-        Task<int> CreateBlog(BlogRequestModel requestModel);
-    }
+    Task<BlogListResponseModel> GetBlogs();
+    Task<int> CreateBlog(BlogRequestModel requestModel);
 }
