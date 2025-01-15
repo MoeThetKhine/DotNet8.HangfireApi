@@ -1,6 +1,1 @@
-﻿namespace DotNet8.HangfireApi
-{
-    public class GlobalUsing
-    {
-    }
-}
+﻿global using Microsoft.EntityFrameworkCore;

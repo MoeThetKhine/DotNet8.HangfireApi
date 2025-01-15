@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.HangfireApi.Modelts;
+﻿namespace DotNet8.HangfireApi.Modelts;
 
 public partial class AppDbContext : DbContext
 {
