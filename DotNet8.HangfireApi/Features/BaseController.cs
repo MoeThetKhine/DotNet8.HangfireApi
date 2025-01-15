@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-
-namespace DotNet8.HangfireApi.Features
+﻿namespace DotNet8.HangfireApi.Features
 {
     [Route("api/[controller]")]
     [ApiController]

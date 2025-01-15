@@ -6,4 +6,6 @@ global using Hangfire;
 global using DotNet8.HangfireApi.AppDbContextModels;
 global using DotNet8.HangfireApi.Features.Blog;
 global using DotNet8.HangfireApi.Mapper;
+global using Microsoft.AspNetCore.Mvc;
+global using Newtonsoft.Json;
 
