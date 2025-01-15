@@ -21,6 +21,8 @@ namespace DotNet8.HangfireApi
 
         #endregion
 
+        #region AddDbContextService
+
         private static IServiceCollection AddDbContextService(
             this IServiceCollection services,
             WebApplicationBuilder builder
@@ -36,6 +38,8 @@ namespace DotNet8.HangfireApi
 
             return services;
         }
+
+        #endregion
 
         private static IServiceCollection AddRepositoryService(this IServiceCollection services)
         {
