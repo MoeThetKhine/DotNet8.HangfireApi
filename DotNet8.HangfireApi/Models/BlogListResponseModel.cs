@@ -1,7 +1,6 @@
-﻿namespace DotNet8.HangfireApi.Models
+﻿namespace DotNet8.HangfireApi.Models;
+
+public class BlogListResponseModel
 {
-    public class BlogListResponseModel
-    {
-        public List<BlogModel> DataLst { get; set; }
-    }
+    public List<BlogModel> DataLst { get; set; }
 }
