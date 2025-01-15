@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.HangfireApi.Mapper;
 
+#region ChangeModel
+
 public static class ChangeModel
 {
 
@@ -33,3 +35,5 @@ public static class ChangeModel
     #endregion
 
 }
+
+#endregion
