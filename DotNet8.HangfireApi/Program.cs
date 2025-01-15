@@ -33,6 +33,7 @@ RecurringJob.AddOrUpdate<IBlogRepository>(
 
 #endregion
 
+#region Schedule
 
 BackgroundJob.Schedule<IBlogRepository>(
        x => x.CreateBlog(new BlogRequestModel()
@@ -43,6 +44,7 @@ BackgroundJob.Schedule<IBlogRepository>(
         }),
           TimeSpan.FromMinutes(1));
 
+#endregion
 
 app.UseAuthorization();
 
