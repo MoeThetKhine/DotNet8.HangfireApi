@@ -13,6 +13,19 @@ namespace DotNet8.HangfireApi.Repositories.Blog
             _appDbContext = appDbContext;
         }
 
+        public async Task<int> CreateBlog(BlogRequestModel requestModel)
+        {
+            try
+            {
+                await _appDbContext.TblBlogs.AddAsync(requestModel.Map());
+                return await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<BlogListResponseModel> GetBlogs()
         {
             try
@@ -31,5 +44,6 @@ namespace DotNet8.HangfireApi.Repositories.Blog
                 throw new Exception(ex.Message);
             }
         }
+
     }
 }
