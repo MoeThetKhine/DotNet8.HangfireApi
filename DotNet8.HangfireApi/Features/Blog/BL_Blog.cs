@@ -1,17 +1,16 @@
-﻿namespace DotNet8.HangfireApi.Features.Blog
+﻿namespace DotNet8.HangfireApi.Features.Blog;
+
+public class BL_Blog
 {
-    public class BL_Blog
+    private readonly IBlogRepository _blogRepository;
+
+    public BL_Blog(IBlogRepository blogRepository)
     {
-        private readonly IBlogRepository _blogRepository;
+        _blogRepository = blogRepository;
+    }
 
-        public BL_Blog(IBlogRepository blogRepository)
-        {
-            _blogRepository = blogRepository;
-        }
-
-        public async Task<BlogListResponseModel> GetBlogs()
-        {
-            return await _blogRepository.GetBlogs();
-        }
+    public async Task<BlogListResponseModel> GetBlogs()
+    {
+        return await _blogRepository.GetBlogs();
     }
 }
